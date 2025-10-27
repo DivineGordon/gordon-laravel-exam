@@ -17,12 +17,12 @@ class PublicPageController extends Controller
             ->firstOrFail();
 
         // Track analytics
-        $sessionId = $request->session()->getId();
+        // $sessionId = $request->session()->getId();
         
         PageAnalytic::create([
             'client_page_id' => $page->id,
             'visitor_ip' => $request->ip(),
-            'session_id' => $sessionId,
+            'session_id' => "sessionId",
             'user_agent' => $request->userAgent(),
             'referer' => $request->header('referer'),
             'visited_at' => now(),
