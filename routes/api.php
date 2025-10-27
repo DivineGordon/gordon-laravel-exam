@@ -12,7 +12,7 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
 // Public page view
-Route::get('/pages/{slug}', [PublicPageController::class, 'show']);
+// Route::get('/pages/{slug}', [PublicPageController::class, 'show']);
 
 // Protected routes (require authentication)
 Route::middleware('auth:sanctum')->group(function () {

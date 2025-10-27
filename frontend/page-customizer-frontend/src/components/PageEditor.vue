@@ -181,7 +181,7 @@ const selectedTheme = computed(() => {
 
 const publicUrl = computed(() => {
   if (!pageStore.page) return '';
-  return `http://localhost:8000/api/pages/${pageStore.page.slug}`;
+  return `http://localhost:8000/pages/${pageStore.page.slug}`;
 });
 
 onMounted(async () => {
