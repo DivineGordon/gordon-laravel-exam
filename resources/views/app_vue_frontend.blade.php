@@ -7,7 +7,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @vite(['frontend\page-customizer-frontend\src\style.css', 'frontend\page-customizer-frontend\src\main.ts'])
+    @vite(['frontend/page-customizer-frontend/src/style.css', 'frontend/page-customizer-frontend/src/main.ts'])
 </head>
 <body>
     <div id="app"></div>
