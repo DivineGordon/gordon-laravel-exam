@@ -167,6 +167,7 @@
 import { ref, computed, onMounted, watch } from 'vue';
 import { usePageStore } from '@/stores/page';
 import PagePreview from './PagePreview.vue';
+import { getApiBase } from '@/utils';
 
 const pageStore = usePageStore();
 
@@ -181,7 +182,7 @@ const selectedTheme = computed(() => {
 
 const publicUrl = computed(() => {
   if (!pageStore.page) return '';
-  return `http://localhost:8000/pages/${pageStore.page.slug}`;
+  return `${getApiBase()}/pages/${pageStore.page.slug}`;
 });
 
 onMounted(async () => {
